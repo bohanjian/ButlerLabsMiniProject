@@ -23,7 +23,9 @@ Sources:
 regex review + basic spaCy:
 - https://realpython.com/natural-language-processing-spacy-python/#visualization-using-displacy
 - https://www.youtube.com/watch?v=KL4-Mpgbahw
+
 exporting to CSV:
 - https://www.youtube.com/watch?v=s1XiCh-mGCA
+
 list of programming languages:
 - https://www.whoishostingthis.com/resources/programming/
