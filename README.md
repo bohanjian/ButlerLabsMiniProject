@@ -7,6 +7,7 @@ Takes in a folder of resumes called "in_resume_samples" within the current worki
 Files in this program:
 - pdfExtraction.py - Extracts information from pdf's and exports data to csv file.
 - matchPatterns.py - Defines match patterns, utilizing spaCy tokens, in order to locate programming languages.
+
 More information can be found about both of these files within the files themselves.
 
 Important Notes to Run the Program:
