@@ -22,6 +22,7 @@ Could additionally add more data fields, or train a model to better predict what
 Could pursue training a model to determine what is or isn't a coding language. (I briefly looked into training models using the youtube video linked below but did not have time to implement it, nor time to collect the volume of data necessary)
 
 Sources: 
+
 regex review + basic spaCy:
 - https://realpython.com/natural-language-processing-spacy-python/#visualization-using-displacy
 - https://www.youtube.com/watch?v=KL4-Mpgbahw
