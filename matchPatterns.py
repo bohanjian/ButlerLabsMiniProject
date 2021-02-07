@@ -39,7 +39,7 @@ def generateProgrammingLanguageMatchPatterns(matcher):
                     {'LOWER': 'language'}]
     matcher.add("APL", [apl_pattern1, apl_pattern2])
 
-    asp_pattern = [{'TEXT': {'REGEX': "(asp|ASP)"}},
+    asp_pattern = [{'LOWER': 'asp'},
                    {'IS_PUNCT': False}]
     matcher.add("ASP", [asp_pattern])
 
@@ -151,12 +151,13 @@ def generateProgrammingLanguageMatchPatterns(matcher):
                     {'LOWER': 'language'}]
     matcher.add("IDL", [idl_pattern1, idl_pattern2])
 
-    # could be improved by elimnating the other use of the word 'java'
+    # could be improved by eliminating the other use of the word 'java'
+    # I am assuming if they use a java library, they know how to use java
     java_pattern = [{'LOWER': {'IN': ['java', 'junit']}}]
     matcher.add("JAVA", [java_pattern])
 
     # included common libraries as well as JS libraries from the sample resumes.
-    # I am assuming if they use a JS library, they are using JS
+    # I am assuming if they use a JS library, they know how to use JS
     js_pattern1 = [{'LOWER': {
         'IN': ['js', 'javascript', 'jquery', ' jsclient', 'reactjs', 'qunit', 'winjs', 'node', 'nodejs',
                'backbonejs']}}]
@@ -176,14 +177,14 @@ def generateProgrammingLanguageMatchPatterns(matcher):
 
     # Could be improved by analyzing dependant + its own parts of speech classifications
     # to eliminate the other uses of the word 'lisp'
+    # Classifies some dialects of lisp as lisp. Could improve by adding more dialects
     lisp_pattern1 = [{'LOWER': {'IN': ['lisp', 'scheme', 'maclisp']}}]
     lisp_pattern2 = [{'LOWER': 'common'},
                      {'LOWER': 'lisp'}]
     matcher.add("LISP", [lisp_pattern1, lisp_pattern2])
 
     # Can be improved, but for now searching for logo as a proper noun should work for most cases
-    logo_pattern = [{'LEMMA': {'NOT_IN': ['a', 'A', 'my', 'My']}},
-                    {'LOWER': 'logo'},
+    logo_pattern = [{'LOWER': 'logo'},
                     {'POS': 'PROPN'}]
     matcher.add("LOGO", [logo_pattern])
 
@@ -206,7 +207,7 @@ def generateProgrammingLanguageMatchPatterns(matcher):
     nosql_pattern = [{'LOWER': {'IN': ['ravendb', 'noSQL']}}]
     matcher.add("NOSQL", [nosql_pattern])
 
-    # MySQL came up so much, but based on the little research I did, it didn't feel right to group with SQL
+    # MySQL came up so much, but based on the minimal research I did, it didn't feel right to group with SQL
     mysql_pattern = [{'LOWER': 'mysql'}]
     matcher.add("MYSQL", [mysql_pattern])
 
