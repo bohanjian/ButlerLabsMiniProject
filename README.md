@@ -1,6 +1,7 @@
 # ButlerLabsMiniProject
 
 What this program does:
+
 Takes in a folder of resumes called "in_resume_samples" within the current working directory, splits them into readable strings, searches for info using regex and spaCy (their name, email, and what coding languages they likely know), and exports that data to a csv file named "resumeInfo" in the same current working directory.
 
 Files in this program:
@@ -15,6 +16,7 @@ Important Notes to Run the Program:
 - the program grabs files from the provided folder "in_resume_samples" with some pdf's already present. If you wish to add   more resumes, please add them in that folder.
 
 Additional Notes:
+
 There are quite a few comments on what could be improved, as this is a work in progress. 
 Could additionally add more data fields, or train a model to better predict what is and what isn't a name (in order to accept more resume templates). 
 Could pursue training a model to determine what is or isn't a coding language. (I briefly looked into training models using the youtube video linked below but did not have time to implement it, nor time to collect the volume of data necessary)
